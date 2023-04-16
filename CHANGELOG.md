@@ -1,0 +1,48 @@
+- Merge pull request #9 from v-castaneda/feature_victor
+- updating README
+- adding new build files
+- Merge pull request #8 from v-castaneda/feature_victor7.0
+- editing PlaceDetails and PlaceIndex
+- Merge pull request #7 from v-castaneda/feature_victor6.0
+- reformatting PlaceDetails.js
+- formatting PlaceIndex.js
+- adding new images to carousel
+- removing old restrant refs in PlaceIndex and editing NewPlaceForm
+- adding additional routes to sign-in form
+- re-routing log in functionality
+- fixing read post button on main landing page button to not break in deployment
+- Merge pull request #6 from v-castaneda/feature_victor5.0
+- adding validation functionality to only allow logged in users to comment on posts
+- adding new build for deployment
+- Merge pull request #5 from v-castaneda/feature_ricardo2.2
+- fixing NewPlaceForm and PlaceIndex
+- fixing LoginForm - backend links were broken in bootstrap refactoring
+- fixing SignUpForm - backend links were broken in bootstrap refactoring
+- Carousel complete but need to add more
+- LoginForm styled
+- styled signin page but incomplete
+- Merge pull request #4 from v-castaneda/feature_victor4.0
+- udpating README
+- cleaning up front end
+- fixing comment delete route and logout onClick function
+- deleting archived zip files used in AWS deployments
+- Merge pull request #3 from v-castaneda/feature_victor3.0
+- updating build
+- removing edit and delete posts functionality - users should not be able to delete posts
+- refactoring navbar to add react-bootstrap
+- Navigation.js --- removing reload(), replacing localStorage.removeItem with .clear, and clearing out comments
+- adding new build with feature_victor3.0 bug fixes
+- adding log out functionality
+- added autheratization functionality and a placeholder logout button
+- fixed bug specific to deleteComment
+- fixed bug specific to createComment
+- Merge pull request #2 from v-castaneda/feature_victor2.0
+- updating local databases
+- Merge pull request #1 from v-castaneda/feature_victor
+- changing file path references from 5000 to REACT_APP_SERVER_URL variable
+- updating frontend to prepare run build functionaltiy
+- adding paths
+- adjusting backend index.js file
+- adding frontend .env; react build path; and static rendering to backend index.js
+- resetting restrant to reflect rest-rant-monorepo at the head of jwt-authentication branch
+- Create LICENSE
