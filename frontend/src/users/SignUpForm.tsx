@@ -1,21 +1,28 @@
-import { useState, useEffect } from "react";
-import { useHistory, useParams } from "react-router";
+import { useState } from "react";
+import { useHistory } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../css/custom.css";
 
+interface User {
+  firstName: string;
+  lastName: string;
+  email: string;
+  password: string;
+}
+
 function SignUpForm() {
   const history = useHistory();
 
-  const [user, setUser] = useState({
+  const [user, setUser] = useState<User>({
     firstName: '',
     lastName: '',
     email: '',
     password: '',
   });
 
-  async function handleSubmit(e) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
     // await fetch(`http://localhost:5000/users/`, {

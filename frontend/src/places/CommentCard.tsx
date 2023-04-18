@@ -1,7 +1,25 @@
 import { useContext } from "react";
 import { CurrentUser } from '../contexts/CurrentUser'
 
-function CommentCard({ comment, onDelete }) {
+interface Comment {
+    id: number;
+    content: string;
+    author: {
+        id: number;
+        firstName: string;
+        lastName: string;
+    };
+    rant: boolean;
+    stars: number; 
+    authorId: number;
+}
+
+interface Props {
+    comment: Comment;
+    onDelete: () => void;
+}
+
+function CommentCard({ comment, onDelete }: Props) {
 
     const { currentUser } = useContext(CurrentUser)
 

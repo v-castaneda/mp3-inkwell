@@ -1,15 +1,21 @@
 import { Container, Navbar, Nav, NavDropdown } from "react-bootstrap";
 import { useState, useEffect, useContext } from "react";
-import { useHistory } from "react-router";
+import { useHistory } from "react-router-dom";
 import { CurrentUser } from "./contexts/CurrentUser";
 
-function Navigation() {
+interface User {
+  id: number;
+  firstName: string;
+  lastName: string;
+}
+
+function Navigation(): JSX.Element {
   const history = useHistory();
 
   const { currentUser } = useContext(CurrentUser);
 
-  function logIn() {
-      let loginActions
+  function logIn(): JSX.Element {
+      let loginActions: JSX.Element;
       if (currentUser) {
           loginActions = (
               <>
@@ -26,15 +32,15 @@ function Navigation() {
       return loginActions
   }
 
-  let currentBanner = logIn();
+  let currentBanner: JSX.Element = logIn();
 
-  function handleLogout() {
+  function handleLogout(): void {
       localStorage.clear()
       currentBanner = logIn()
-      window.location = "/places"
+      window.location.href = "/places"
   }
 
-  function handleStartWriting() {
+  function handleStartWriting(): void {
     if (currentUser) {
       history.push("/places/new")
     } else {

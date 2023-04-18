@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { useHistory } from "react-router";
+import { useHistory } from "react-router-dom";
 import { CurrentUser } from "../contexts/CurrentUser";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
@@ -17,9 +17,9 @@ function LoginForm() {
     password: '',
   });
 
-  const [errorMessage, setErrorMessage] = useState(null);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  async function handleSubmit(e) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
     // const response = await fetch(`http://localhost:5000/authentication/`, {
